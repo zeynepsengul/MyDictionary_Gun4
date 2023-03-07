@@ -21,7 +21,19 @@ namespace MyDictionary_Gun4
             T2[] tempArray2 = items2;
             items= new T1[items.Length+1];
             items2 = new T2[items.Length+1];
-            Console.WriteLine();
+
+            for (int i = 0; i < tempArray1.Length; i++)
+            {
+                items[i] = tempArray1[i];
+                items2[i]=tempArray2[i];
+            }
+            items[items.Length - 1] = item; 
+            items2[items.Length - 1] = item2;   
+            
+        }
+        public int Count()
+        {
+            return items.Length;
         }
     }
 }
